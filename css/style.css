@@ -1,0 +1,98 @@
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  background-color: rgb(218, 218, 218);
+}
+
+h2 {
+  color: #4d4d4d;
+  margin-bottom: 15px;
+}
+h1 {
+  color: #4d4d4d;
+  font-weight: 600;
+  font-size: 35px;
+}
+
+.weather {
+  margin-top: 150px;
+  background-color: white;
+  box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.213);
+  -webkit-backdrop-filter: blur(50px);
+  backdrop-filter: blur(50px);
+  width: 300px;
+  padding: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+  display: block;
+}
+.weather.active {
+  display: none;
+}
+
+input {
+  padding: 10px;
+  margin: 20px;
+  outline: none;
+  border: 0px;
+  border-bottom: 0.5px solid rgb(137, 137, 137);
+  width: 200px;
+  height: 30px;
+  color: rgb(86, 86, 86);
+  font-size: 15px;
+  font-family: "Times New Roman", Times, serif;
+}
+
+#buttonid {
+  font-family: "Times New Roman", Times, serif;
+  margin-top: 15px;
+  padding: 5px;
+  background-color: #0077ff;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.605);
+  color: #fff;
+  border: none;
+  width: 100px;
+  border-radius: 10px;
+  height: 40px;
+  cursor: pointer;
+}
+#buttonid:hover {
+  box-shadow: inset 2px 2px 10px rgba(0, 0, 0, 0.605);
+}
+#weatherInfo {
+  margin-top: 30px;
+}
+
+.loader.active {
+  margin-top: 250px;
+  --r1: 154%;
+  --r2: 68.5%;
+  width: 150px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: radial-gradient(
+      var(--r1) var(--r2) at top,
+      #0000 79.5%,
+      #269af2 80%
+    ),
+    radial-gradient(var(--r1) var(--r2) at bottom, #269af2 79.5%, #0000 80%),
+    radial-gradient(var(--r1) var(--r2) at top, #0000 79.5%, #269af2 80%),
+    #ccc;
+  background-size: 50.5% 220%;
+  background-position: -100% 0%, 0% 0%, 100% 0%;
+  background-repeat: no-repeat;
+  animation: l9 2s infinite linear;
+}
+@keyframes l9 {
+  33% {
+    background-position: 0% 33%, 100% 33%, 200% 33%;
+  }
+  66% {
+    background-position: -100% 66%, 0% 66%, 100% 66%;
+  }
+  100% {
+    background-position: 0% 100%, 100% 100%, 200% 100%;
+  }
+}
